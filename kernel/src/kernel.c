@@ -16,8 +16,13 @@ int main(int argc, char* argv[]) {
 
     //------------ Hilos-------------
     //escuchar_modulos();
-    //log_info(kernel_logger, "Se atendieron correctamente los hilos")
+    log_info(kernel_logger, "Se atendieron correctamente los hilos");
 
+
+    //------------ Consola-------------
+    //Iniciar Consola interactiva
+    //Al tener todo lo demas ejectando en hilos podemos usar el principal para la ejecucion de la consola
+    iniciar_consola_interactiva();
 
     //Finalizar Kernel
     //finalizar_kernel();

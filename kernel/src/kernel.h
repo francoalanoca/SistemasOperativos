@@ -12,6 +12,7 @@
 #include "config_kernel.h"
 #include "conexion.h"
 #include "protocolo.h"
+#include "consola.h"
 
 
 t_log* kernel_logger;
@@ -35,6 +36,10 @@ char* QUANTUM;
 char** RECURSOS;
 char** INSTANCIAS_RECURSOS;
 char* GRADO_MULTIPROGRAMACION;
+
+int identificador_pid = 1;
+int contador_pcbs = 1;
+pthread_mutex_t mutex_pid;
 
 
 int main(int argc, char* argv[]);
